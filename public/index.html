@@ -6,19 +6,89 @@
     <title>Bootstrap demo</title>
     <link href="style.css" rel="stylesheet">
     <style>
-      body {
-          font: normal 18pt Arial;
-      }
-</style>
+        body {
+    margin: 0;
+    padding: 0;
+    font: normal 10pt Arial;
+}
+
+header {
+    background-color: #333; /* Cor de fundo da barra de navegação */
+    color: #fff; /* Cor do texto na barra de navegação */
+    padding: 10px; /* Espaçamento interno na barra de navegação */
+}
+
+.container {
+    width: 90%; /* Largura máxima do conteúdo na barra de navegação */
+    margin: 0 auto; /* Centralizar o conteúdo */
+    display: flex;
+    justify-content: space-between; /* Espaçamento entre o logo e a navegação */
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px; /* Espaçamento entre os itens de navegação */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white; /* Cor do texto nos links de navegação */
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #ffd700; /* Cor do texto ao passar o mouse sobre os links de navegação */
+}
+.conteudo {
+            overflow: hidden; /* Clearfix para evitar problemas de layout com floats */
+            margin-bottom: 10px; /* Espaço altura entre as imagens */
+            
+        }
+
+.imagem {
+    float: left; /* Faz com que a imagem flutue à esquerda */
+     margin-right: 50px; /* Espaço entre a imagem e o parágrafo */
+     margin-left: 50px; /* Espaço no lado esquerdo da imagem */
+        }
+        .descricao {
+    margin-right: 200px; /* Espaço entre a imagem e o parágrafo */
+
+        }
+  
+    </style>
 </head>
 <body>
-<h1>Clínica Vitta</h1>
-<div>
-    <img src="clinica.jpg" align="left">
-    Lorem Ipsum é simplesmente um texto fictício da indústria de impressão e composição tipográfica. Lorem Ipsum tem sido o texto fictício padrão da indústria desde 1500, quando um impressor desconhecido pegou uma prova de tipos e a misturou para fazer um livro de espécimes de tipos. Ela sobreviveu não apenas a cinco séculos, mas também ao salto para a composição tipográfica eletrônica, permanecendo essencialmente inalterada. Foi popularizado na década de 1960 com o lançamento de folhas Letraset contendo passagens de Lorem Ipsum e, mais recentemente, com software de editoração eletrônica como Aldus PageMaker, incluindo versões de Lorem Ipsum
-</div>
-  
+    <header>
+        <div class="container">
+            <h1>Clínica Vitta</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Serviços</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+        <div class="conteudo">
+            <img src="clinica.jpg" align="left" style="width: 30%; height: auto;" class="imagem">
+            <h2><p><strong>Conheça um pouco sobre a Clínica Vitta</strong></p></h2>
+            <p class="descricao">Bem-vindo à Clinica Vitta! Nossa casa é um ambiente acolhedor e dedicado ao cuidado integral de idosos, com um foco especial na saúde e bem-estar de nossos preciosos residentes. Aqui, buscamos proporcionar uma atmosfera que promova a qualidade de vida e a felicidade em todas as fases do envelhecimento.</p>
+        </div>
+        <div class="conteudo">    
+            <img src="imagem02.JPG" align="left" style="width: 30%; height: auto;" class="imagem">
+            <p class="descricao">Nós buscamos ir além do cuidado básico, criando um ambiente que celebra a vida e respeita a individualidade de cada idoso. Nossa missão é proporcionar não apenas cuidados de saúde excepcionais, mas também momentos de alegria, aprendizado e conexão. Aqui, cada residente é parte de uma grande família, e estamos empenhados em fazer com que todos se sintam em casa.</p>
+        </div>
 
+        
 </body>
 <!-- <body>
     
