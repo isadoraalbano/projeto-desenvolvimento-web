@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cadastro</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    
     <style>
         body{
             background-image: url(backgroundLogin.jpg);
@@ -81,16 +85,16 @@ h1 a {
                     <p class="text-white-50 mb-5">Informe seu email e senha!</p>
       
                     <div class="form-outline form-white mb-4">
-                      <input type="email" id="typeEmailX" class="form-control form-control-lg" />
-                      <label class="form-label" for="typeEmailX">Email</label>
+                      <input type="email" id="email" class="form-control form-control-lg" />
+                      <label class="form-label" for="email">Email</label>
                     </div>
       
                     <div class="form-outline form-white mb-4">
-                      <input type="password" id="typePasswordX" class="form-control form-control-lg" />
-                      <label class="form-label" for="typePasswordX">Senha</label>
+                      <input type="password" id="password" class="form-control form-control-lg" />
+                      <label class="form-label" for="password">Senha</label>
                     </div>
       
-                    <a href="login.html"><button class="btn btn-outline-light btn-lg px-5" type="submit"> Cadastrar </button></a>
+                    <button class="btn btn-outline-light btn-lg px-5" type="submit" onclick="register()"><a href="login.html"> Cadastrar </a></button>
       
                   </div>
       
@@ -100,5 +104,6 @@ h1 a {
           </div>
         </div>
       </section>
+      <script src="user.js"></script>
   </body>
 </html>

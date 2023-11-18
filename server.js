@@ -8,6 +8,12 @@ app.use(express.json());
 
 app.use(bodyParser.urlencoded({extended: true}));
 
+// app.post('/user', function (req, res){
+//     var user = req.body;
+//     localStorage.setItem('email', user.email);
+//     localStorage.setItem('password', user.password);
+//     res.status(401).send(new Error('errooooo'))
+// })
 
 var server = app.listen(3000, function () {
    var host = server.address().address;
