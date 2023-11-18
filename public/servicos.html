@@ -57,12 +57,41 @@
         h1 a:hover {
             color: #ffd700;
         }
+        h2 {
+            text-align: center; /* Centraliza o texto */
+        }
+        .containerh2 {
+            max-width: 700px;
+            margin: 50px auto;
+            padding: 20px;
+        }
         .conteudo {
                     overflow: hidden; /* Clearfix para evitar problemas de layout com floats */
                     margin-bottom: 10px; /* Espaço altura entre as imagens */
                     margin: 10px;
                 }
-
+                button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-top: 30px; /* Adiciona espaço acima do primeiro parágrafo */
+        }
+        img {
+            margin-bottom: 80px;
+        }
+        
     </style>
     
 </head>
@@ -73,30 +102,45 @@
             <h1><a href="index.html">Clínica Vitta</a></h1>
             <nav>
                 <ul>
-                    <li><a href="#">Serviços</a></li>
                     <li><a href="#">Contato</a></li>
                     <li><a href="login.html">Login</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-        <div class="container">
-            <h2><p><strong>Serviços oferecidos pela Clínica Vitta</strong></p></h2>
-        </div>
-            <div class="text-center pt-5">
+    <div class="containerh2">
+        <h2><strong>Serviços oferecidos pela Clínica Vitta</strong></h2>
+    </div>
+            <div class="text-center pt-10">
                 <div class="row shc">
+                     <div>
+                            <img src="imagem03.jpg" align="right" style="width: 80%; height: auto;">
+                        </div>
 
-                    <div class="col-md-6 shc">
-                        <div id="agendamento">
-                            <h3>Agendamentos</h3>
+                    <div class="col-md-12 shc">
+                        <div>
+                            <h3>Depoimentos</h3>
+                            <textarea id="depoimento" placeholder="Digite seu depoimento aqui..."></textarea>
+                            <button onclick="enviarDepoimento()">Enviar Depoimento</button>
+                            <div id="resultado"></div>
                         </div>
-                    </div>
-                    
-            
-                    <div class="col-md-6 shc">
-                        <div id="feedback">
-                            <h3>Feedbacks</h3>
-                        </div>
+                            <script>
+                                function enviarDepoimento() {
+                                    var depoimento = document.getElementById('depoimento').value;
+                                    if (depoimento.trim() !== '') {
+                                        var resultadoDiv = document.getElementById('resultado');
+                                        resultadoDiv.innerHTML = depoimento;
+                                    } else {
+                                        alert('Por favor, preencha o depoimento antes de enviar.');
+                                    }
+                                }
+                            </script>
+                            <div>
+                                <p> "Minha mãe está na Clínica Vitta há quatro anos e no próximo mês a “Dona Carmélia”, como é conhecida pela equipe da instituição, estará completando 95 anos. Nossa família decidiu na época em trocar os cuidados que ela recebia em casa pelos cuidados em uma instituição de longa permanência para idosos, pois ela já estava com um quadro de demência avançada além de limitações de locomoção. Depois de muita procura finalmente encontramos a Clínica Vitta e foi uma experiência de confiança e aprendizado constante desde então, pois fomos muito bem acolhidos pela instituição tanto minha mãe como a família e só temos a agradecer pelo carinho e profissionalismo dedicados por toda a equipe."    <strong>Márcio William</strong></p>
+                                
+                                <p> "Há cinco anos iniciamos nosso convívio com a Clínica Vitta e nesse período as novas experiências vividas pela minha mãe foram as melhores possíveis o que nos permite afirmar que a dedicação, carinho e sobretudo o amor dispensado por toda a equipe da família Bem Viver transmite muita segurança e conforto".   <strong>Fernanda L.</strong></p>
+                            </div>
+                        
                     </div>
                 </div>
             
