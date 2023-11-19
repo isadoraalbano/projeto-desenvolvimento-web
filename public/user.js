@@ -20,6 +20,9 @@ function login() {
     }
     $.post( "http://localhost:3000/login", data, function(resp) {
         alert( resp.msg );
+        $(document).on('click', '.btn', function() {
+                window.location = '/servicos.html'
+            })
       }).fail(function() {
           alert( "Email ou senha incorretos!" );
     })
