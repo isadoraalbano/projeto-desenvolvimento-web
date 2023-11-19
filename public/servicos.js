@@ -7,12 +7,16 @@ var Depoimentos = (function() {
 
     var ObterDepoimentos = function() {
         $.get(DEPOIMENTO_URL, function(resp) {
-            var depoimentosSection = $('<section>').attr('id', 'listaDepoimentos');
+            var depoimentosSection = $('<div>').attr('id', 'listaDepoimentos');
 
             resp.forEach(depoimento => {
                 $(depoimentosSection).append(
-                    $('<article>').text(depoimento.texto)
-                );
+                    $('<article>').append(
+                        $('<p>').text(depoimento.texto)
+                        .append($('<br/>'))
+                        .append($('<em>').text('- ' + depoimento.nome)))
+                )
+                .append($('<hr/>'));
             });
 
             $('#listaDepoimentos').replaceWith(depoimentosSection);
@@ -24,11 +28,15 @@ var Depoimentos = (function() {
 
     var SalvarDepoimento = function() {
         var data = {
+            nome: $('#nome').val(),
             texto: $('#depoimento').val()
         }
 
         $.post(DEPOIMENTO_URL, data, function(resp) {
             ObterDepoimentos();
+
+            $('#nome').val('');
+            $('#depoimento').val('');
         }).fail(function() {
             alert( "Erro ao salvar depoimento!" );
         });

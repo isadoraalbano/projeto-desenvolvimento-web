@@ -60,6 +60,11 @@
         h2 {
             text-align: center; /* Centraliza o texto */
         }
+        
+        h3 {
+            margin-top: 24px;
+        }
+        
         .containerh2 {
             max-width: 700px;
             margin: 50px auto;
@@ -78,13 +83,13 @@
             border-radius: 3px;
             cursor: pointer;
         }
-        textarea {
+        /* textarea {
             width: 100%;
             height: 100px;
             padding: 10px;
             box-sizing: border-box;
             margin-bottom: 10px;
-        }
+        } */
         p {
             margin-top: 30px; /* Adiciona espaço acima do primeiro parágrafo */
         }
@@ -92,6 +97,9 @@
             margin-bottom: 80px;
         }
         
+        .form-group {
+            margin-top: 20px;
+        }
     </style>
     
 </head>
@@ -120,14 +128,33 @@
 
                 <div class="col-md-12 shc">
                     <section>
-                        <h3>Depoimentos</h3>
-                        <textarea id="depoimento" placeholder="Digite seu depoimento aqui..."></textarea>
-                        <button onclick="Depoimentos.SalvarDepoimento()">Enviar Depoimento</button>
-                        <div id="resultado"></div>
+                        <h3>Deixe seu depoimento</h3>
+                        <form id="form-depoimento" onsubmit="Depoimentos.SalvarDepoimento(); return false;">
+                            <div class="form-group">
+                                <div class="col-md-3">
+                                    <input id="nome" type="text" class="form-control" placeholder="Digite seu nome aqui..." required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <textarea id="depoimento" class="form-control" placeholder="Digite seu depoimento aqui..." rows=3 required></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row justify-content-md-center">
+                                    <div class="col-md-2 ">
+                                        <button  type="submit" class="btn btn-success">Enviar Depoimento</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                     </section>
 
-                    <section id="listaDepoimentos">
-                        <!-- Lista de Depoimentos -->
+                    <section">
+                        <h3>Depoimentos</h3>
+                        <div id="listaDepoimentos">
+                            <!-- Lista de Depoimentos -->
+                        </div>
                     </section>
                 </div>
             </div>
