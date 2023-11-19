@@ -6,9 +6,24 @@ function register() {
         email: newEmail, password: newPassword
     }
     $.post( "http://localhost:3000/user", data, function(resp) {
-        console.log('ENTROU')
         alert( resp.msg );
       }).fail(function() {
           alert( "Erro ao cadastrar!" );
+    })
+}
+
+function login() {
+    var email = $("#email1").val();
+    var password= $("#password1").val();
+    var data = {
+        email: email, password: password
+    }
+    $.post( "http://localhost:3000/login", data, function(resp) {
+        alert( resp.msg );
+        $(document).on('click', '.btn', function() {
+                window.location = '/servicos.html'
+            })
+      }).fail(function() {
+          alert( "Email ou senha incorretos!" );
     })
 }
