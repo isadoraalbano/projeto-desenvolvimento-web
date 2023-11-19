@@ -108,45 +108,33 @@
             </nav>
         </div>
     </header>
-    <div class="containerh2">
-        <h2><strong>Serviços oferecidos pela Clínica Vitta</strong></h2>
-    </div>
-            <div class="text-center pt-10">
-                <div class="row shc">
-                     <div>
-                            <img src="imagem03.jpg" align="right" style="width: 80%; height: auto;">
-                        </div>
-
-                    <div class="col-md-12 shc">
-                        <div>
-                            <h3>Depoimentos</h3>
-                            <textarea id="depoimento" placeholder="Digite seu depoimento aqui..."></textarea>
-                            <button onclick="enviarDepoimento()">Enviar Depoimento</button>
-                            <div id="resultado"></div>
-                        </div>
-                            <script>
-                                function enviarDepoimento() {
-                                    var depoimento = document.getElementById('depoimento').value;
-                                    if (depoimento.trim() !== '') {
-                                        var resultadoDiv = document.getElementById('resultado');
-                                        resultadoDiv.innerHTML = depoimento;
-                                    } else {
-                                        alert('Por favor, preencha o depoimento antes de enviar.');
-                                    }
-                                }
-                            </script>
-                            <div>
-                                <p> "Minha mãe está na Clínica Vitta há quatro anos e no próximo mês a “Dona Carmélia”, como é conhecida pela equipe da instituição, estará completando 95 anos. Nossa família decidiu na época em trocar os cuidados que ela recebia em casa pelos cuidados em uma instituição de longa permanência para idosos, pois ela já estava com um quadro de demência avançada além de limitações de locomoção. Depois de muita procura finalmente encontramos a Clínica Vitta e foi uma experiência de confiança e aprendizado constante desde então, pois fomos muito bem acolhidos pela instituição tanto minha mãe como a família e só temos a agradecer pelo carinho e profissionalismo dedicados por toda a equipe."    <strong>Márcio William</strong></p>
-                                
-                                <p> "Há cinco anos iniciamos nosso convívio com a Clínica Vitta e nesse período as novas experiências vividas pela minha mãe foram as melhores possíveis o que nos permite afirmar que a dedicação, carinho e sobretudo o amor dispensado por toda a equipe da família Bem Viver transmite muita segurança e conforto".   <strong>Fernanda L.</strong></p>
-                            </div>
-                        
-                    </div>
+    <div >
+        <div class="containerh2">
+            <h2><strong>Serviços oferecidos pela Clínica Vitta</strong></h2>
+        </div>
+        <div class="text-center pt-10">
+            <div class="row shc">
+                <div>
+                    <img src="imagem03.jpg" align="right" style="width: 80%; height: auto;">
                 </div>
-            
-        
+
+                <div class="col-md-12 shc">
+                    <section>
+                        <h3>Depoimentos</h3>
+                        <textarea id="depoimento" placeholder="Digite seu depoimento aqui..."></textarea>
+                        <button onclick="Depoimentos.SalvarDepoimento()">Enviar Depoimento</button>
+                        <div id="resultado"></div>
+                    </section>
+
+                    <section id="listaDepoimentos">
+
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="./servicos.js"></script>
 </body>
-<!-- <body>
-    
-</body> -->
 </html>
